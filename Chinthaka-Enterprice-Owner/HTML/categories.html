@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Categories - Chinthaka Enterprises</title>
+    <link rel="stylesheet" href="assets/css/admin-style.css">
+</head>
+<body>
+    <!-- Sidebar included from the main admin template -->
+    <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><i class="bi bi-house"></i> Dashboard</a></li>
+                <li><a href="add-item.html"><i class="bi bi-plus-square"></i> Add New Item</a></li>
+                <li><a href="categories.html"><i class="bi bi-folder-plus"></i> Categories</a></li>
+                <li><a href="orders.html"><i class="bi bi-box-seam"></i> Orders</a></li>
+                <li><a href="customers.html"><i class="bi bi-people"></i> Customers</a></li>
+                <li><a href="404.html"><i class="bi bi-gift"></i> Offers</a></li> <!-- offers.html -->
+                <li><a href="user-profile.html"><i class="bi bi-person"></i> User Profile</a></li>
+                <li><a href="404.html"><i class="bi bi-building"></i> Company Profile</a></li> <!-- company-profile.html -->
+                <li><a href="reports.html"><i class="bi bi-graph-up"></i> Reports</a></li>
+                <li><a href="inventory.html"><i class="bi bi-archive"></i> Inventory</a></li>
+                <li><a href="404.html"><i class="bi bi-search"></i> Search</a></li> <!-- search.html -->
+                <li><a href="feedback.html"><i class="bi bi-chat-left-text"></i> Feedback</a></li>
+                <li><a href="payments.html"><i class="bi bi-credit-card"></i> Payments</a></li>
+                <li><a href="notifications.html"><i class="bi bi-bell"></i> Notifications</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header>
+            <h1>Categories Management</h1>
+        </header>
+
+        <section class="content">
+            <!-- Existing Categories List -->
+            <div class="categories-list">
+                <h2>Existing Categories</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category Name</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Brake Pads</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Engine Parts</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Tires</td>
+                            <td>
+                                <button class="edit-btn">Edit</button>
+                                <button class="delete-btn">Delete</button>
+                            </td>
+                        </tr>
+                        <!-- More categories as needed -->
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Add New Category Form -->
+            <div class="add-category-form">
+                <h2>Add New Category</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="new-category">Category Name</label>
+                        <input type="text" id="new-category" name="new-category" placeholder="Enter new category name" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Add Category</button>
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

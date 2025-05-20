@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Payments - Chinthaka Enterprises</title>
+    <link rel="stylesheet" href="assets/css/admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- Sidebar included from the main admin template -->
+    <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><i class="bi bi-house"></i> Dashboard</a></li>
+                <li><a href="add-item.html"><i class="bi bi-plus-square"></i> Add New Item</a></li>
+                <li><a href="categories.html"><i class="bi bi-folder-plus"></i> Categories</a></li>
+                <li><a href="orders.html"><i class="bi bi-box-seam"></i> Orders</a></li>
+                <li><a href="customers.html"><i class="bi bi-people"></i> Customers</a></li>
+                <li><a href="404.html"><i class="bi bi-gift"></i> Offers</a></li> <!-- offers.html -->
+                <li><a href="user-profile.html"><i class="bi bi-person"></i> User Profile</a></li>
+                <li><a href="404.html"><i class="bi bi-building"></i> Company Profile</a></li> <!-- company-profile.html -->
+                <li><a href="reports.html"><i class="bi bi-graph-up"></i> Reports</a></li>
+                <li><a href="inventory.html"><i class="bi bi-archive"></i> Inventory</a></li>
+                <li><a href="404.html"><i class="bi bi-search"></i> Search</a></li> <!-- search.html -->
+                <li><a href="feedback.html"><i class="bi bi-chat-left-text"></i> Feedback</a></li>
+                <li><a href="payments.html"><i class="bi bi-credit-card"></i> Payments</a></li>
+                <li><a href="notifications.html"><i class="bi bi-bell"></i> Notifications</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header>
+            <h1>Payment Management</h1>
+        </header>
+
+        <section class="content">
+            <!-- Payment List -->
+            <div class="payment-list">
+                <h2>Payment Status</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Payment ID</th>
+                            <th>Customer Name</th>
+                            <th>Amount</th>
+                            <th>Payment Method</th>
+                            <th>Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#PAY001</td>
+                            <td>John Doe</td>
+                            <td>$620.00</td>
+                            <td>Credit Card</td>
+                            <td><span class="status pending">Pending</span></td>
+                            <td>
+                                <button class="view-btn">View</button>
+                                <button class="confirm-btn">Confirm</button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#PAY002</td>
+                            <td>Jane Smith</td>
+                            <td>$250.00</td>
+                            <td>Bank Transfer</td>
+                            <td><span class="status confirmed">Confirmed</span></td>
+                            <td>
+                                <button class="view-btn">View</button>
+                            </td>
+                        </tr>
+                        <!-- Add more payment records as needed -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

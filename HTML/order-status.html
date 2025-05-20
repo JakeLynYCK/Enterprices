@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Order Status - Chinthaka Enterprises</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Chinthaka Enterprises</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Order Status Section -->
+    <section class="order-status">
+        <div class="container">
+            <h2>Check Your Order Status</h2>
+            <p>Enter your Order ID to check the status of your order.</p>
+
+            <form id="orderStatusForm" onsubmit="return checkOrderStatus()">
+                <input type="text" id="orderId" placeholder="Enter Order ID" required>
+                <button type="submit" class="btn check-status-btn">Check Status</button>
+            </form>
+
+            <!-- Display Order Status -->
+            <div id="orderStatusResult" class="order-status-result" style="display: none;">
+                <p><strong>Order ID:</strong> <span id="resultOrderId"></span></p>
+                <p><strong>Status:</strong> <span id="resultStatus"></span></p>
+                <p><strong>Estimated Delivery:</strong> <span id="resultDelivery"></span></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chinthaka Enterprises. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // JavaScript function to simulate checking order status
+        function checkOrderStatus() {
+            const orderId = document.getElementById('orderId').value;
+            const resultContainer = document.getElementById('orderStatusResult');
+            const resultOrderId = document.getElementById('resultOrderId');
+            const resultStatus = document.getElementById('resultStatus');
+            const resultDelivery = document.getElementById('resultDelivery');
+
+            // Example logic to simulate order status retrieval
+            if (orderId === "123456") {
+                resultOrderId.textContent = orderId;
+                resultStatus.textContent = "Shipped";
+                resultDelivery.textContent = "November 15, 2024";
+            } else {
+                resultOrderId.textContent = orderId;
+                resultStatus.textContent = "Processing";
+                resultDelivery.textContent = "TBD";
+            }
+
+            // Display the order status result
+            resultContainer.style.display = "block";
+            return false; // Prevent form submission
+        }
+    </script>
+</body>
+</html>

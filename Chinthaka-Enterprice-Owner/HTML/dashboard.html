@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard - Chinthaka Enterprises</title>
+    <link rel="stylesheet" href="assets/css/admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- Sidebar included from the main admin template -->
+    <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><i class="bi bi-house"></i> Dashboard</a></li>
+                <li><a href="add-item.html"><i class="bi bi-plus-square"></i> Add New Item</a></li>
+                <li><a href="categories.html"><i class="bi bi-folder-plus"></i> Categories</a></li>
+                <li><a href="orders.html"><i class="bi bi-box-seam"></i> Orders</a></li>
+                <li><a href="customers.html"><i class="bi bi-people"></i> Customers</a></li>
+                <li><a href="404.html"><i class="bi bi-gift"></i> Offers</a></li> <!-- offers.html -->
+                <li><a href="user-profile.html"><i class="bi bi-person"></i> User Profile</a></li>
+                <li><a href="404.html"><i class="bi bi-building"></i> Company Profile</a></li> <!-- company-profile.html -->
+                <li><a href="reports.html"><i class="bi bi-graph-up"></i> Reports</a></li>
+                <li><a href="inventory.html"><i class="bi bi-archive"></i> Inventory</a></li>
+                <li><a href="404.html"><i class="bi bi-search"></i> Search</a></li> <!-- search.html -->
+                <li><a href="feedback.html"><i class="bi bi-chat-left-text"></i> Feedback</a></li>
+                <li><a href="payments.html"><i class="bi bi-credit-card"></i> Payments</a></li>
+                <li><a href="notifications.html"><i class="bi bi-bell"></i> Notifications</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header>
+            <h1>Welcome to the Admin Dashboard</h1>
+            <!-- <p>Get an overview of recent activities and important metrics.</p> -->
+            <a href="login.html" class="logout-btn"><i class="bi bi-box-arrow-right"></i> Logout</a>
+        </header>
+
+        <!-- Dashboard Cards -->
+        <section class="dashboard-cards">
+            <div class="card">
+                <i class="bi bi-graph-up"></i>
+                <h3>Total Sales</h3>
+                <p>$15,000</p>
+            </div>
+            <div class="card">
+                <i class="bi bi-box-seam"></i>
+                <h3>Pending Orders</h3>
+                <p>8</p>
+            </div>
+            <div class="card">
+                <i class="bi bi-people"></i>
+                <h3>Total Customers</h3>
+                <p>120</p>
+            </div>
+            <div class="card">
+                <i class="bi bi-chat-left-text"></i>
+                <h3>New Messages</h3>
+                <p>5</p>
+            </div>
+        </section>
+
+        <!-- Recent Orders Table -->
+        <section class="recent-orders">
+            <h2>Recent Orders</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Order ID</th>
+                        <th>Customer Name</th>
+                        <th>Status</th>
+                        <th>Amount</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#ORD001</td>
+                        <td>John Doe</td>
+                        <td><span class="status pending">Pending</span></td>
+                        <td>$200</td>
+                        <td><button class="btn view-btn">View</button></td>
+                    </tr>
+                    <tr>
+                        <td>#ORD002</td>
+                        <td>Jane Smith</td>
+                        <td><span class="status confirmed">Confirmed</span></td>
+                        <td>$150</td>
+                        <td><button class="btn view-btn">View</button></td>
+                    </tr>
+                    <!-- Add more recent orders as needed -->
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Notifications Section -->
+        <section class="dashboard-notifications">
+            <h2>Notifications</h2>
+            <ul>
+                <li><i class="bi bi-box"></i> New order received from Mark Lee - 10 minutes ago</li>
+                <li><i class="bi bi-exclamation-circle"></i> Low stock alert on Engine Oil - 30 minutes ago</li>
+                <li><i class="bi bi-cash"></i> Payment received from Alice Brown - 1 hour ago</li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

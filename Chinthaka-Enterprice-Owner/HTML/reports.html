@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Reports - Chinthaka Enterprises</title>
+    <link rel="stylesheet" href="assets/css/admin-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- Sidebar included from the main admin template -->
+    <aside class="sidebar">
+        <h2>Admin Panel</h2>
+        <nav>
+            <ul>
+                <li><a href="dashboard.html"><i class="bi bi-house"></i> Dashboard</a></li>
+                <li><a href="add-item.html"><i class="bi bi-plus-square"></i> Add New Item</a></li>
+                <li><a href="categories.html"><i class="bi bi-folder-plus"></i> Categories</a></li>
+                <li><a href="orders.html"><i class="bi bi-box-seam"></i> Orders</a></li>
+                <li><a href="customers.html"><i class="bi bi-people"></i> Customers</a></li>
+                <li><a href="404.html"><i class="bi bi-gift"></i> Offers</a></li> <!-- offers.html -->
+                <li><a href="user-profile.html"><i class="bi bi-person"></i> User Profile</a></li>
+                <li><a href="404.html"><i class="bi bi-building"></i> Company Profile</a></li> <!-- company-profile.html -->
+                <li><a href="reports.html"><i class="bi bi-graph-up"></i> Reports</a></li>
+                <li><a href="inventory.html"><i class="bi bi-archive"></i> Inventory</a></li>
+                <li><a href="404.html"><i class="bi bi-search"></i> Search</a></li> <!-- search.html -->
+                <li><a href="feedback.html"><i class="bi bi-chat-left-text"></i> Feedback</a></li>
+                <li><a href="payments.html"><i class="bi bi-credit-card"></i> Payments</a></li>
+                <li><a href="notifications.html"><i class="bi bi-bell"></i> Notifications</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <header>
+            <h1>Reports</h1>
+        </header>
+
+        <section class="content">
+            <!-- Date Filter Options -->
+            <div class="date-filters">
+                <h2>Select Report Duration</h2>
+                <button onclick="generateReport('monthly')">Monthly</button>
+                <button onclick="generateReport('annual')">Annually</button>
+                <button onclick="generateReport('custom')">Custom</button>
+                <div id="custom-date-range" style="display: none;">
+                    <input type="date" id="start-date">
+                    <input type="date" id="end-date">
+                    <button onclick="applyCustomDate()">Apply</button>
+                </div>
+            </div>
+
+            <!-- Sales Reports Section -->
+            <div class="report-section">
+                <h2>Sales Reports</h2>
+                <p>Overview of sales performance.</p>
+                <div class="report-chart" id="sales-report-chart">
+                    <p>Sales data and charts will be displayed here.</p>
+                </div>
+            </div>
+
+            <!-- Inventory Reports Section -->
+            <div class="report-section">
+                <h2>Inventory Status</h2>
+                <p>Current status of inventory items.</p>
+                <div class="report-chart" id="inventory-report-chart">
+                    <p>Inventory data and charts will be displayed here.</p>
+                </div>
+            </div>
+
+            <!-- Summary Notes Section -->
+            <div class="report-section">
+                <h2>Summary Notes</h2>
+                <p>Notes and observations on sales and inventory trends.</p>
+                <textarea class="summary-notes" rows="6" placeholder="Add summary notes here..."></textarea>
+            </div>
+
+            <!-- Download as PDF -->
+            <button onclick="downloadPDF()" class="btn download-btn"><i class="bi bi-file-earmark-arrow-down"></i> Download Report as PDF</button>
+        </section>
+    </main>
+
+    <script>
+        // Show custom date range picker
+        function generateReport(type) {
+            document.getElementById("custom-date-range").style.display = (type === 'custom') ? 'block' : 'none';
+            // Fetch and display report based on the selected type (monthly, annual, or custom)
+            console.log(`Generating ${type} report`);
+        }
+
+        // Apply custom date range
+        function applyCustomDate() {
+            const startDate = document.getElementById("start-date").value;
+            const endDate = document.getElementById("end-date").value;
+            console.log(`Generating custom report from ${startDate} to ${endDate}`);
+            // Fetch and display the report for the selected date range
+        }
+
+        // Download as PDF
+        function downloadPDF() {
+            // Here, you would implement the functionality to generate and download a PDF.
+            alert('PDF download functionality will be implemented here.');
+        }
+    </script>
+</body>
+</html>

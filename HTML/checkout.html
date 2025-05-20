@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout - Chinthaka Enterprises</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.8.1/font/bootstrap-icons.min.css">
+</head>
+<body>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1 class="logo">Chinthaka Enterprises</h1>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="shop.html">Shop</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="cart.html" class="cart">Cart</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Checkout Section -->
+    <section class="checkout">
+        <div class="container">
+            <h2>Checkout</h2>
+
+            <div class="checkout-container">
+                <!-- Customer Information and Billing Details -->
+                <div class="billing-section">
+                    <h3>Customer Information</h3>
+                    <input type="email" placeholder="Username or Email Address">
+
+                    <h3>Billing Details</h3>
+                    <div class="billing-details">
+                        <input type="text" placeholder="First name *" required>
+                        <input type="text" placeholder="Last name *" required>
+                        <input type="text" placeholder="Company name">
+                        <select required>
+                            <option value="">Country / Region *</option>
+                            <option value="India">India</option>
+                            <option value="Sri Lanka">Sri Lanka</option>
+                        </select>
+                        <input type="text" placeholder="House number and street name" required>
+                        <input type="text" placeholder="Apartment, suite, unit, etc. (optional)">
+                        <input type="text" placeholder="Town / City *" required>
+                        <input type="text" placeholder="State *" required>
+                        <input type="text" placeholder="PIN Code *" required>
+                        <input type="tel" placeholder="Phone *" required>
+                    </div>
+
+                    <h3>Additional Information</h3>
+                    <textarea placeholder="Notes about your order, e.g., special notes for delivery." rows="3"></textarea>
+                </div>
+
+                <!-- Order Summary -->
+                <div class="order-summary">
+                    <h3>Your Order</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Product</th>
+                                <th>Subtotal</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Booster Brave F1 - LG × 1</td>
+                                <td>$620.00</td>
+                            </tr>
+                            <tr>
+                                <td>Subtotal</td>
+                                <td>$620.00</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Total</strong></td>
+                                <td><strong>$620.00</strong></td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <!-- Payment Section -->
+                    <h3>Payment</h3>
+                    <div class="payment-options">
+                        <label>
+                            <input type="radio" name="payment" checked>
+                            Cash on delivery
+                            <p>Pay with cash upon delivery.</p>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="payment">
+                            Bank transfer
+                            <p>Transfer directly to our bank account.</p>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="payment">
+                            Card Payment (VISA/Master)
+                            <p>Pay securely with your credit or debit card.</p>
+                        </label>
+                    </div>
+                    <!-- Place Order Button -->
+                    <button class="btn place-order-btn" onclick="window.location.href='confirmation.html'">Place Order $620.00</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Chinthaka Enterprises. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
